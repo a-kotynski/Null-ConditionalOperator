@@ -20,10 +20,7 @@ namespace NullConditionalOperator
             { // object initialization syntax?
                 Name = "Gerald" 
             };
-            if (person != null)
-            {
-                Console.WriteLine(person.Name);
-            }
+            Console.WriteLine(person?.Name); // added null conditional operator
         }
     }
 }
