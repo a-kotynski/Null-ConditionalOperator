@@ -16,14 +16,8 @@ namespace NullConditionalOperator
         }
         static void Main(string[] args)
         {
-            Person person = new Person
-            { // object initialization syntax?
-                Name = "Gerald" 
-            };
-            if (person != null)
-            {
-                Console.WriteLine(person.Name);
-            }
+            Person person = null;
+            Console.WriteLine(person?.Name);
         }
     }
 }
