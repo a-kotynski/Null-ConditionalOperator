@@ -18,11 +18,12 @@ namespace NullConditionalOperator
         {
             Person person = new Person
             {
-                Name = "Gerald",
+                Name = "Abe",
                 Partner = new Person
                 {
-                    Name = "Gerald2"
+                    Name = "Abe2"
                 },
+                Hobbies = new[] {"Cooking", "Flying", "Doing stuff"}
             };
 
             if (string.IsNullOrWhiteSpace(person?.Partner?.Name))
@@ -34,6 +35,9 @@ namespace NullConditionalOperator
             Console.WriteLine(person?.Name); // if person is null then it will be
                                              // skipped
             Console.WriteLine(person?.Partner.Name);
+            Console.WriteLine(string.Join(", ", person?.Hobbies));
+            Console.WriteLine();
+            Console.WriteLine("Best hobby: " + person?.Hobbies?[0]);
         }
     }
 }
